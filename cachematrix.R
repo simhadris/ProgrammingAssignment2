@@ -1,7 +1,8 @@
 ## Objective of the program is to compute matrix inverse, store and re-use
-## the result from cache without having to compute every time needed or called.
+## the result from cache without having to compute every time needed.
 
-## The first function, makeVector creates a special "vector", which is really a ## list containing a function to
+## The first function, makeCacheMatrix() creates a special "vector", 
+## which is really a list containing a function to
 ## set the value of the matrix , get the value of the matrix
 ## set the value of the inverse, get the value of the inverse
 
@@ -12,7 +13,7 @@ makeCacheMatrix <- function(x = matrix()) {
         s <<- NULL
     }
     get <- function() x
-    setsolve <- function(solve) s <<- solve
+    setsolve <- function(solve) s <<- solve ## Solve() function used to compute inverse of a matrix
     getsolve <- function() s
     list(set = set, get = get, 
          setsolve = setsolve,
