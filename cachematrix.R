@@ -1,8 +1,7 @@
-## Objective of the program is to compute matrix inverse, store and re-use
-## the result from cache without having to compute every time needed.
+## Objective of the program is to compute matrix inverse, store and re-use the result from cache;
+## without having to compute every single time needed.
 
-## The first function, makeCacheMatrix() creates a special "vector", 
-## which is really a list containing a function to
+## The first function, makeCacheMatrix() creates a list of functions to
 ## set the value of the matrix , get the value of the matrix
 ## set the value of the inverse, get the value of the inverse
 
